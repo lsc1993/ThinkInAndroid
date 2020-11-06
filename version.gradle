@@ -13,4 +13,6 @@ ext {
     junit = "4.13.1"
     junit_ext = "1.1.2"
     espresso_core = "3.3.0"
+
+    arouter = "1.5.1"
 }

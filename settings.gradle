@@ -1,2 +1,3 @@
+include ':module-router'
 include ':app'
 rootProject.name = "ThinkInAndroid"
