@@ -5,14 +5,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion rootProject.ext.compile_sdk_version
-    buildToolsVersion rootProject.ext.build_tools_version
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
-        minSdkVersion rootProject.ext.min_sdk_version
-        targetSdkVersion rootProject.ext.target_sdk_version
-        versionCode rootProject.ext.version_code
-        versionName rootProject.ext.version_name
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -46,10 +46,14 @@ android {
 }
 
 dependencies {
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "androidx.core:core-ktx:${rootProject.ext.core_ktx}"
+    implementation "androidx.appcompat:appcompat:${rootProject.ext.appcompat}"
+    implementation "com.google.android.material:material:${rootProject.ext.material}"
+    implementation "androidx.constraintlayout:constraintlayout:${rootProject.ext.constraintlayout}"
 
-    api "com.alibaba:arouter-api:${rootProject.ext.arouter}"
+    implementation project(":module-router")
     annotationProcessor "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
     kapt "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
 
