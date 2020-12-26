@@ -18,5 +18,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnAnimate).setOnClickListener {
             ARouter.getInstance().build("/animate/Index").navigation()
         }
+
+        findViewById<Button>(R.id.btnJetPack).setOnClickListener {
+            ARouter.getInstance().build("/jetpack/Index").navigation()
+        }
     }
 }

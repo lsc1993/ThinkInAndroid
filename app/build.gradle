@@ -41,6 +41,7 @@ dependencies {
 
     implementation project(":module-router")
     implementation project(":module-animate")
+    implementation project(":module-jetpack")
 
     testImplementation "junit:junit:${rootProject.ext.junit}"
     androidTestImplementation "androidx.test.ext:junit:${rootProject.ext.junit_ext}"
