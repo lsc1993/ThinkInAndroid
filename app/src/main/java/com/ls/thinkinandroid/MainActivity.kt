@@ -26,5 +26,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnJetPack).setOnClickListener {
             ARouter.getInstance().build("/jetpack/Index").navigation()
         }
+
+        val list: ArrayList<String> = ArrayList()
+        list.add("ss")
+        list[0].length
     }
 }
