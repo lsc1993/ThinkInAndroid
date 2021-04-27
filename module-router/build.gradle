@@ -52,8 +52,4 @@ dependencies {
     api "com.alibaba:arouter-api:${rootProject.ext.arouter}"
     annotationProcessor "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
     kapt "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
-
-    testImplementation "junit:junit:${rootProject.ext.junit}"
-    androidTestImplementation "androidx.test.ext:junit:${rootProject.ext.junit_ext}"
-    androidTestImplementation "androidx.test.espresso:espresso-core:${rootProject.ext.espresso_core}"
 }

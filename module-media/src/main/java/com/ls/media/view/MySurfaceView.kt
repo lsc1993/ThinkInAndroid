@@ -32,20 +32,20 @@ class MySurfaceView : SurfaceView, Runnable {
         paint.color = Color.parseColor("#F29E1F")
 
         holder.addCallback(object : SurfaceHolder.Callback {
-            override fun surfaceCreated(holder: SurfaceHolder?) {
+            override fun surfaceCreated(holder: SurfaceHolder) {
                 isRun = true
                 thread.start()
             }
 
             override fun surfaceChanged(
-                holder: SurfaceHolder?,
+                holder: SurfaceHolder,
                 format: Int,
                 width: Int,
                 height: Int
             ) {
             }
 
-            override fun surfaceDestroyed(holder: SurfaceHolder?) {
+            override fun surfaceDestroyed(holder: SurfaceHolder) {
                 isRun = false
                 thread.interrupt()
             }

@@ -44,8 +44,4 @@ dependencies {
     implementation project(":module-jetpack")
     implementation project(":module-activity")
     implementation project(":module-media")
-
-    testImplementation "junit:junit:${rootProject.ext.junit}"
-    androidTestImplementation "androidx.test.ext:junit:${rootProject.ext.junit_ext}"
-    androidTestImplementation "androidx.test.espresso:espresso-core:${rootProject.ext.espresso_core}"
 }
