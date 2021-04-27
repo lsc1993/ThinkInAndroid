@@ -44,4 +44,5 @@ dependencies {
     implementation project(":module-jetpack")
     implementation project(":module-activity")
     implementation project(":module-media")
+    implementation project(":module-coroutine")
 }

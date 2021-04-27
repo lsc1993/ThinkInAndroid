@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.ls.coroutine.page.ScopeFragment
 
 @Route(path = "/coroutine/Index")
 class CoroutineActivity : AppCompatActivity() {
@@ -16,7 +17,9 @@ class CoroutineActivity : AppCompatActivity() {
 
     private fun initView() {
         findViewById<Button>(R.id.btnScope).setOnClickListener {
-
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.add(R.id.fl_container, ScopeFragment.newInstance())
+            transaction.commitAllowingStateLoss()
         }
     }
 }

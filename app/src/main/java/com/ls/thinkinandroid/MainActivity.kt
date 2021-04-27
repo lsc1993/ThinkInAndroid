@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
             ARouter.getInstance().build("/media/Index").navigation()
         }
 
-        val list: ArrayList<String> = ArrayList()
-        list.add("ss")
-        list[0].length
+        findViewById<Button>(R.id.btnCoroutine).setOnClickListener {
+            ARouter.getInstance().build("/coroutine/Index").navigation()
+        }
     }
 }
