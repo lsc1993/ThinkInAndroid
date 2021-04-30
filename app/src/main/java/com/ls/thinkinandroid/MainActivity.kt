@@ -34,5 +34,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnActivity).setOnClickListener {
             ARouter.getInstance().build("/activity/Index").navigation()
         }
+
+        findViewById<Button>(R.id.btnView).setOnClickListener {
+            ARouter.getInstance().build("/view/Index").navigation()
+        }
     }
 }

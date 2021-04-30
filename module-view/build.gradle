@@ -1,6 +1,7 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -8,13 +9,25 @@ android {
     buildToolsVersion rootProject.ext.build_tools_version
 
     defaultConfig {
-        applicationId "com.ls.thinkinandroid"
         minSdkVersion rootProject.ext.min_sdk_version
         targetSdkVersion rootProject.ext.target_sdk_version
         versionCode rootProject.ext.version_code
         versionName rootProject.ext.version_name
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
     }
 
     buildTypes {
@@ -30,9 +43,14 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "androidx.core:core-ktx:${rootProject.ext.core_ktx}"
     implementation "androidx.appcompat:appcompat:${rootProject.ext.appcompat}"
@@ -40,10 +58,7 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:${rootProject.ext.constraintlayout}"
 
     implementation project(":module-router")
-    implementation project(":module-animate")
-    implementation project(":module-jetpack")
-    implementation project(":module-activity")
-    implementation project(":module-media")
-    implementation project(":module-coroutine")
-    implementation project(":module-view")
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    annotationProcessor "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
+    kapt "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
 }
