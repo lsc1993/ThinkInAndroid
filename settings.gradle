@@ -1,3 +1,4 @@
+include ':module-customview'
 include ':module-view'
 include ':module-coroutine'
 include ':module-media'

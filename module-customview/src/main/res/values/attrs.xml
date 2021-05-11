@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <declare-styleable name="RoundImageView">
+    <attr format="dimension" name="cornerRadius"/>
+  </declare-styleable>
+  <declare-styleable name="VeGallery">
+    <attr name="android:gravity"/>
+    <attr name="android:spacing"/>
+    <attr name="android:unselectedAlpha"/>
+    <attr name="android:animationDuration"/>
+  </declare-styleable>
+
+  <declare-styleable name="VeTrimGallery">
+    <attr format="reference" name="LeftTrimBar"/>
+    <attr format="reference" name="RightTrimBar"/>
+  </declare-styleable>
+
+
+  <declare-styleable name="CropImageView">
+
+    <attr name="guidelines">
+      <enum name="off" value="0"/>
+      <enum name="onTouch" value="1"/>
+      <enum name="on" value="2"/>
+    </attr>
+
+    <attr format="boolean" name="fixAspectRatio"/>
+    <attr format="integer" name="aspectRatioX"/>
+    <attr format="integer" name="aspectRatioY"/>
+
+  </declare-styleable>
+
+  <declare-styleable name="FastScrollRecyclerView">
+    <attr name="fastScrollThumbColor" format="reference|color" />
+    <attr name="fastScrollThumbInactiveColor" format="reference|color" />
+    <attr name="fastScrollTrackColor" format="reference|color" />
+    <attr name="fastScrollPopupBgColor" format="reference|color" />
+    <attr name="fastScrollPopupTextColor" format="reference|color" />
+    <attr name="fastScrollPopupTextSize" format="reference|dimension" />
+    <attr name="fastScrollPopupTextVerticalAlignmentMode" format="enum">
+      <enum name="text_bounds" value="0"/>
+      <enum name="font_metrics" value="1"/>
+    </attr>
+    <attr name="fastScrollPopupBackgroundSize" format="reference|dimension" />
+    <attr name="fastScrollPopupPosition" format="enum">
+      <enum name="adjacent" value="0"/>
+      <enum name="center" value="1"/>
+    </attr>
+    <attr name="fastScrollAutoHide" format="reference|boolean" />
+    <attr name="fastScrollAutoHideDelay" format="reference|integer" />
+    <attr name="fastScrollEnableThumbInactiveColor" format="reference|boolean" />
+    <attr name="fastScrollThumbEnabled" format="reference|boolean" />
+  </declare-styleable>
+</resources>
