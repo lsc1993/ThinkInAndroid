@@ -43,6 +43,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -59,4 +62,8 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
     annotationProcessor "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
     kapt "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
+
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.13.3'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.13.3'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.13.3'
 }

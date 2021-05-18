@@ -43,8 +43,8 @@ class PropertyAnimatorFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        //test()
-        testContinue()
+        test()
+        //testContinue()
     }
 
     private fun testContinue() {
@@ -102,7 +102,7 @@ class PropertyAnimatorFragment : Fragment() {
     }
 
     private suspend fun supervisor(v: String) = supervisorScope {
-       val a = 1 / 0
+        val a = 1 / 0
     }
 
     private fun test() {
@@ -136,14 +136,12 @@ class PropertyAnimatorFragment : Fragment() {
         publishSubject.onComplete()
         publishSubject.onNext("world")*/
 
-        val ddd = Observable.create<String> {
-            Log.d(TAG, "thread:" + Thread.currentThread().name)
-            it.onNext("hello")
-        }.subscribeOn(Schedulers.io())
+        val ddd = Observable.create(ObservableOnSubscribe<String> { TODO("Not yet implemented") })
+            .subscribeOn(Schedulers.io())
             .map {
-            Log.d(TAG, "thread:" + Thread.currentThread().name)
-            "hello world"
-        }
+                Log.d(TAG, "thread:" + Thread.currentThread().name)
+                "hello world"
+            }
             .observeOn(Schedulers.newThread())
             .subscribe {
                 Log.d(TAG, "result: $it thread: ${Thread.currentThread().name}")
@@ -154,12 +152,12 @@ class PropertyAnimatorFragment : Fragment() {
         val cachePath = requireContext().externalCacheDir
 
 
-        Log.d(TAG, "path: $path  cache: $cachePath  filepath: $filepath")
+        /*Log.d(TAG, "path: $path  cache: $cachePath  filepath: $filepath")
 
         val file1 = File(filepath!!.absolutePath + "/liu")
         if (!file1.exists()) {
             file1.mkdir()
-        }
+        }*/
     }
 
     companion object {
