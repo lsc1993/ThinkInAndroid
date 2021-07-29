@@ -2,8 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ls.view">
 
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
     <application>
-        <activity android:name=".touch.TouchEventActivity"></activity>
+        <activity android:name=".custom.CustomViewActivity"></activity>
+        <activity android:name=".touch.TouchEventActivity" />
         <activity android:name=".ViewActivity" />
     </application>
 
