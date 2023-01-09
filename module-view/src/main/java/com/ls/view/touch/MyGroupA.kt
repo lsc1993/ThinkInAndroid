@@ -55,6 +55,7 @@ class MyGroupA : RelativeLayout {
   }
 
   override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
+    super.onInterceptTouchEvent(ev)
     ev?.run {
       when (ev.action) {
         MotionEvent.ACTION_DOWN -> {
@@ -70,7 +71,7 @@ class MyGroupA : RelativeLayout {
         }
       }
     }
-    return super.onInterceptTouchEvent(ev)
+    return false
   }
 
   override fun onTouchEvent(event: MotionEvent?): Boolean {

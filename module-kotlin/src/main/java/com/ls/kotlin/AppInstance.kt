@@ -12,4 +12,8 @@ object AppInstance {
         return _app!!
     }
 
+    fun setApp(app: Application) {
+        _app = app
+    }
+
 }

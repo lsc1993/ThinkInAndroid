@@ -63,8 +63,10 @@ class MyView : AppCompatTextView {
         else -> {}
       }
     }
-    //return result
-    return false
+
+    Log.d("TouchEvent", "MyViewA ### onTouchEvent -> $result")
+    return result
+    //return false
     //return true
   }
 }

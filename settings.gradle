@@ -9,3 +9,4 @@ include ':module-router'
 include ':app'
 rootProject.name = "ThinkInAndroid"
 include ':module-kotlin'
+include ':module-gallery'

@@ -25,24 +25,24 @@ class TouchEventActivity : AppCompatActivity() {
         setContentView(R.layout.activity_touch_event)
     }
 
-    override fun onTouchEvent(event: MotionEvent?): Boolean {
-        val result = super.onTouchEvent(event)
-        event?.run {
-            when (event.action) {
-                MotionEvent.ACTION_DOWN -> {
-                    Log.d("TouchEvent", "TouchEventActivity *** onTouchEvent -> ACTION_DOWN")
-                    //return true
-                }
-                MotionEvent.ACTION_MOVE -> {
-                    Log.d("TouchEvent", "TouchEventActivity *** onTouchEvent -> ACTION_MOVE")
-                }
-                MotionEvent.ACTION_UP -> {
-                    Log.d("TouchEvent", "TouchEventActivity *** onTouchEvent -> ACTION_UP")
-                    //return false
-                }
-                else -> {}
-            }
-        }
-        return result
-    }
+//    override fun onTouchEvent(event: MotionEvent?): Boolean {
+//        val result = super.onTouchEvent(event)
+//        event?.run {
+//            when (event.action) {
+//                MotionEvent.ACTION_DOWN -> {
+//                    Log.d("TouchEvent", "TouchEventActivity *** onTouchEvent -> ACTION_DOWN")
+//                    //return true
+//                }
+//                MotionEvent.ACTION_MOVE -> {
+//                    Log.d("TouchEvent", "TouchEventActivity *** onTouchEvent -> ACTION_MOVE")
+//                }
+//                MotionEvent.ACTION_UP -> {
+//                    Log.d("TouchEvent", "TouchEventActivity *** onTouchEvent -> ACTION_UP")
+//                    //return false
+//                }
+//                else -> {}
+//            }
+//        }
+//        return result
+//    }
 }
