@@ -42,5 +42,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnGallery).setOnClickListener {
             ARouter.getInstance().build("/gallery/Index").navigation()
         }
+
+        findViewById<Button>(R.id.btnStorage).setOnClickListener {
+            ARouter.getInstance().build("/storage/Index").navigation()
+        }
     }
 }
