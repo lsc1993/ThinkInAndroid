@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.alibaba.android.arouter.launcher.ARouter
+import com.ls.thinkinandroid.hook.AndroidHookHelper
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,6 +13,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         initView()
+
+        AndroidHookHelper.hookMH()
     }
 
     private fun initView() {
