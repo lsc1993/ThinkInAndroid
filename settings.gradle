@@ -11,3 +11,4 @@ rootProject.name = "ThinkInAndroid"
 include ':module-kotlin'
 include ':module-gallery'
 include ':module-storage'
+include ':module-player'

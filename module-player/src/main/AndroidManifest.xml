@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ls.player">
+
+    <application>
+        <activity
+            android:name="com.ls.page.PlayerDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ls.page.PlayVideoActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

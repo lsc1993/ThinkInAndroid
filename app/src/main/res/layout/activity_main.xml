@@ -39,6 +39,17 @@
         app:layout_constraintTop_toBottomOf="@+id/btnJetPack"/>
 
     <Button
+        android:id="@+id/btnPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player"
+        android:textAllCaps="false"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMedia"/>
+
+    <Button
         android:id="@+id/btnCoroutine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,7 +58,7 @@
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMedia"/>
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayer"/>
 
     <Button
         android:id="@+id/btnActivity"

@@ -30,6 +30,10 @@ class MainActivity : AppCompatActivity() {
             ARouter.getInstance().build("/media/Index").navigation()
         }
 
+        findViewById<Button>(R.id.btnPlayer).setOnClickListener {
+            ARouter.getInstance().build("/player/Index").navigation()
+        }
+
         findViewById<Button>(R.id.btnCoroutine).setOnClickListener {
             ARouter.getInstance().build("/coroutine/Index").navigation()
         }
