@@ -10,10 +10,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.ls.coroutine.R
 import com.ls.coroutine.databinding.FragmentExceptionHandlerBinding
-import kotlinx.coroutines.CoroutineExceptionHandler
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.asFlow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.conflate
+import kotlinx.coroutines.flow.flow
 import java.lang.Exception
 import java.lang.StringBuilder
 
@@ -60,6 +61,25 @@ class ExceptionHandlerFragment : Fragment() {
                 }
                 throw ArithmeticException("Hey!!")
             }*/
+
+            val result = async { "" }
+            result.await()
+
+            val resultList = listOf(
+                async {
+                      withContext(Dispatchers.IO) {
+
+                      }
+                },
+                async {  }
+            )
+
+            flow<Int> {
+                listOf<Int>(1, 2, 3).forEach {
+                    emit(1)
+                }
+            }.collect {  }
+            resultList.awaitAll()
 
             /**
              * 这里CoroutineExceptionHandler无法捕获子协程异常

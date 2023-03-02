@@ -11,4 +11,9 @@ class StorageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_storage)
     }
 
+    override fun onResume() {
+        super.onResume()
+        throw NullPointerException()
+    }
+
 }

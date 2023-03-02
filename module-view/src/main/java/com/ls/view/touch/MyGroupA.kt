@@ -63,6 +63,7 @@ class MyGroupA : RelativeLayout {
         }
         MotionEvent.ACTION_MOVE -> {
           Log.d("TouchEvent", "MyGroupA ### onInterceptTouchEvent -> ACTION_MOVE")
+          //return true
         }
         MotionEvent.ACTION_UP -> {
           Log.d("TouchEvent", "MyGroupA ### onInterceptTouchEvent -> ACTION_UP")
