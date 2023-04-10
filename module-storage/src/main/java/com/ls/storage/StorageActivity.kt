@@ -10,10 +10,4 @@ class StorageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_storage)
     }
-
-    override fun onResume() {
-        super.onResume()
-        throw NullPointerException()
-    }
-
 }

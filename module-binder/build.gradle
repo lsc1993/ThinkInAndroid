@@ -41,7 +41,6 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
     viewBinding {
         enabled = true
     }
@@ -52,10 +51,8 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "androidx.core:core-ktx:${rootProject.ext.core_ktx}"
     implementation "androidx.appcompat:appcompat:${rootProject.ext.appcompat}"
-    implementation "androidx.fragment:fragment-ktx:${rootProject.ext.fragment}"
     implementation "com.google.android.material:material:${rootProject.ext.material}"
     implementation "androidx.constraintlayout:constraintlayout:${rootProject.ext.constraintlayout}"
-
     implementation project(":module-router")
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     annotationProcessor "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"

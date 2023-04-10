@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.ls.activity.flag.FlagActivity
+import com.ls.activity.fragment.TestFragmentActivity
 
 /**
  * allowTaskReparenting设置为true
@@ -30,6 +31,11 @@ class TestActivity : AppCompatActivity() {
     private fun initView() {
         findViewById<Button>(R.id.btn_flag).setOnClickListener {
             val intent = Intent(this, FlagActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.btn_fragment).setOnClickListener {
+            val intent = Intent(this, TestFragmentActivity::class.java)
             startActivity(intent)
         }
     }

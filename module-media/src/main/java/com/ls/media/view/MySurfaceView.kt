@@ -17,7 +17,7 @@ class MySurfaceView : SurfaceView, Runnable {
     private lateinit var canvas: Canvas
     private val random: Random = Random(System.currentTimeMillis())
     private val paint: Paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    private val thread: Thread = Thread(this)
+    private lateinit var thread: Thread
 
     private var isRun = true
 
@@ -34,6 +34,7 @@ class MySurfaceView : SurfaceView, Runnable {
         holder.addCallback(object : SurfaceHolder.Callback {
             override fun surfaceCreated(holder: SurfaceHolder) {
                 isRun = true
+                thread = Thread(this@MySurfaceView)
                 thread.start()
             }
 
@@ -55,9 +56,9 @@ class MySurfaceView : SurfaceView, Runnable {
 
     private fun draw() {
         canvas = holder.lockCanvas()
-        canvas.drawColor(resources.getColor(R.color.design_default_color_error), PorterDuff.Mode.SRC_OVER)
-        val x = random.nextFloat() * 500
-        val y = random.nextFloat() * 500
+        //canvas.drawColor(resources.getColor(R.color.design_default_color_error), PorterDuff.Mode.SRC_OVER)
+        val x = random.nextFloat() * 1500
+        val y = random.nextFloat() * 2500
         canvas.drawCircle(x, y, 20f, paint)
         holder.unlockCanvasAndPost(canvas)
     }

@@ -3,8 +3,10 @@
     package="com.ls.activity">
 
     <application>
-        <activity android:name=".flag.FlagSingleTaskActivity"/>
-
+        <activity
+            android:name=".fragment.TestFragmentActivity"
+            android:exported="false" />
+        <activity android:name=".flag.FlagSingleTaskActivity" />
         <activity android:name=".flag.FlagActivity" />
         <activity
             android:name=".TestActivity"

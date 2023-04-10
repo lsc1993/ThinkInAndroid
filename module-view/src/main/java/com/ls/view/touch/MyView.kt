@@ -50,7 +50,7 @@ class MyView : AppCompatTextView {
       when (event.action) {
         MotionEvent.ACTION_DOWN -> {
           Log.d("TouchEvent", "MyViewA onTouchEvent -> ACTION_DOWN")
-          return true
+          //return true
         }
         MotionEvent.ACTION_MOVE -> {
           Log.d("TouchEvent", "MyViewA onTouchEvent -> ACTION_MOVE")
@@ -59,6 +59,9 @@ class MyView : AppCompatTextView {
         MotionEvent.ACTION_UP -> {
           Log.d("TouchEvent", "MyViewA onTouchEvent -> ACTION_UP")
           //return false
+        }
+        MotionEvent.ACTION_CANCEL -> {
+          Log.d("TouchEvent", "MyViewA onTouchEvent -> ACTION_CANCEL")
         }
         else -> {}
       }
