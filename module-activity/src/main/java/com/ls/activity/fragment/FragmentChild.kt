@@ -2,9 +2,9 @@ package com.ls.activity.fragment
 
 import com.ls.activity.R
 
-class FragmentChild : BaseFragment() {
+class FragmentChild(private val no: Int = 0) : BaseFragment() {
     override fun pageName(): String {
-        return "child"
+        return "child-$no"
     }
 
     override fun getLayoutRes(): Int {

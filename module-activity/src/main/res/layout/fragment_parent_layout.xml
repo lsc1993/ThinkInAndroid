@@ -7,7 +7,6 @@
    <androidx.fragment.app.FragmentContainerView
        android:id="@+id/fl_child_container"
        android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:name="com.ls.activity.fragment.FragmentChild"/>
+       android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
