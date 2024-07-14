@@ -53,10 +53,10 @@ dependencies {
     implementation "androidx.appcompat:appcompat:${rootProject.ext.appcompat}"
     implementation "com.google.android.material:material:${rootProject.ext.material}"
     implementation "androidx.constraintlayout:constraintlayout:${rootProject.ext.constraintlayout}"
-    implementation project(":module-router")
+    
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    annotationProcessor "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
-    kapt "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
+    
+    
     // ExoPlayer
     implementation 'com.google.android.exoplayer:exoplayer:2.18.3'
 }

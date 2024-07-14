@@ -2,10 +2,8 @@ package com.ls.animate
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.alibaba.android.arouter.facade.annotation.Route
 import com.ls.animate.propertyanimator.PropertyAnimatorFragment
 
-@Route(path = "/animate/Index")
 class AnimateActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

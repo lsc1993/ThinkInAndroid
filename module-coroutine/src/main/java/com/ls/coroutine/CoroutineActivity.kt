@@ -3,11 +3,9 @@ package com.ls.coroutine
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.alibaba.android.arouter.facade.annotation.Route
 import com.ls.coroutine.page.ExceptionHandlerFragment
 import com.ls.coroutine.page.ScopeFragment
 
-@Route(path = "/coroutine/Index")
 class CoroutineActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

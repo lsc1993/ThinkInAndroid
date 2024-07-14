@@ -51,8 +51,8 @@ dependencies {
     implementation "com.google.android.material:material:${rootProject.ext.material}"
     implementation "androidx.constraintlayout:constraintlayout:${rootProject.ext.constraintlayout}"
 
-    implementation project(":module-router")
+    
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    annotationProcessor "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
-    kapt "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
+    
+    
 }

@@ -5,7 +5,7 @@ include ':module-media'
 include ':module-activity'
 include ':module-jetpack'
 include ':module-animate'
-include ':module-router'
+//include ':module-router'
 include ':app'
 rootProject.name = "ThinkInAndroid"
 include ':module-kotlin'

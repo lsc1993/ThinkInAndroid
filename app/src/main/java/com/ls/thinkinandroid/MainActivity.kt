@@ -1,10 +1,19 @@
 package com.ls.thinkinandroid
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.alibaba.android.arouter.launcher.ARouter
+import com.ls.activity.TestActivity
+import com.ls.animate.AnimateActivity
+import com.ls.coroutine.CoroutineActivity
+import com.ls.gallery.GalleryActivity
+import com.ls.jetpack.JetpackActivity
+import com.ls.media.MediaActivity
+import com.ls.page.PlayerDemoActivity
+import com.ls.storage.StorageActivity
 import com.ls.thinkinandroid.hook.AndroidHookHelper
+import com.ls.view.ViewActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,39 +28,39 @@ class MainActivity : AppCompatActivity() {
 
     private fun initView() {
         findViewById<Button>(R.id.btnAnimate).setOnClickListener {
-            ARouter.getInstance().build("/animate/Index").navigation()
+            startActivity(Intent(this, AnimateActivity::class.java))
         }
 
         findViewById<Button>(R.id.btnJetPack).setOnClickListener {
-            ARouter.getInstance().build("/jetpack/Index").navigation()
+            startActivity(Intent(this, JetpackActivity::class.java))
         }
 
         findViewById<Button>(R.id.btnMedia).setOnClickListener {
-            ARouter.getInstance().build("/media/Index").navigation()
+            startActivity(Intent(this, MediaActivity::class.java))
         }
 
         findViewById<Button>(R.id.btnPlayer).setOnClickListener {
-            ARouter.getInstance().build("/player/Index").navigation()
+            startActivity(Intent(this, PlayerDemoActivity::class.java))
         }
 
         findViewById<Button>(R.id.btnCoroutine).setOnClickListener {
-            ARouter.getInstance().build("/coroutine/Index").navigation()
+            startActivity(Intent(this, CoroutineActivity::class.java))
         }
 
         findViewById<Button>(R.id.btnActivity).setOnClickListener {
-            ARouter.getInstance().build("/activity/Index").navigation()
+            startActivity(Intent(this, TestActivity::class.java))
         }
 
         findViewById<Button>(R.id.btnView).setOnClickListener {
-            ARouter.getInstance().build("/view/Index").navigation()
+            startActivity(Intent(this, ViewActivity::class.java))
         }
 
         findViewById<Button>(R.id.btnGallery).setOnClickListener {
-            ARouter.getInstance().build("/gallery/Index").navigation()
+            startActivity(Intent(this, GalleryActivity::class.java))
         }
 
         findViewById<Button>(R.id.btnStorage).setOnClickListener {
-            ARouter.getInstance().build("/storage/Index").navigation()
+            startActivity(Intent(this, StorageActivity::class.java))
         }
     }
 }

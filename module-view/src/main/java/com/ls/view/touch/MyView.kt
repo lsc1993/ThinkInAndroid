@@ -4,9 +4,10 @@ import android.content.Context
 import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
+import android.view.View
 import androidx.appcompat.widget.AppCompatTextView
 
-class MyView : AppCompatTextView {
+class MyView : View {
 
   constructor(context: Context) : super(context) {
   }
@@ -25,7 +26,6 @@ class MyView : AppCompatTextView {
   }
 
   override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
-    val result = super.dispatchTouchEvent(ev)
     ev?.run {
       when (ev.action) {
         MotionEvent.ACTION_DOWN -> {
@@ -33,6 +33,7 @@ class MyView : AppCompatTextView {
         }
         MotionEvent.ACTION_MOVE -> {
           Log.d("TouchEvent", "MyViewA dispatchTouchEvent -> ACTION_MOVE")
+//          return false
         }
         MotionEvent.ACTION_UP -> {
           Log.d("TouchEvent", "MyViewA dispatchTouchEvent -> ACTION_UP")
@@ -40,12 +41,12 @@ class MyView : AppCompatTextView {
         else -> {}
       }
     }
+    val result = super.dispatchTouchEvent(ev)
     Log.d("TouchEvent", "MyViewA dispatchTouchEvent -> $result")
     return result
   }
 
   override fun onTouchEvent(event: MotionEvent?): Boolean {
-    val result = super.onTouchEvent(event)
     event?.run {
       when (event.action) {
         MotionEvent.ACTION_DOWN -> {
@@ -54,7 +55,7 @@ class MyView : AppCompatTextView {
         }
         MotionEvent.ACTION_MOVE -> {
           Log.d("TouchEvent", "MyViewA onTouchEvent -> ACTION_MOVE")
-          //return false
+//          return false
         }
         MotionEvent.ACTION_UP -> {
           Log.d("TouchEvent", "MyViewA onTouchEvent -> ACTION_UP")
@@ -66,7 +67,7 @@ class MyView : AppCompatTextView {
         else -> {}
       }
     }
-
+    val result = super.onTouchEvent(event)
     Log.d("TouchEvent", "MyViewA ### onTouchEvent -> $result")
     return result
     //return false

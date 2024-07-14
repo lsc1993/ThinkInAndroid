@@ -53,8 +53,8 @@ dependencies {
     implementation "androidx.core:core-ktx:${rootProject.ext.core_ktx}"
     implementation "androidx.appcompat:appcompat:${rootProject.ext.appcompat}"
 
-    implementation project(":module-router")
+    
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    annotationProcessor "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
-    kapt "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
+    
+    
 }

@@ -33,7 +33,6 @@ class MyGroupA : RelativeLayout {
   }
 
   override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
-    val result = super.dispatchTouchEvent(ev)
     ev?.run {
       when (ev.action) {
         MotionEvent.ACTION_DOWN -> {
@@ -50,6 +49,7 @@ class MyGroupA : RelativeLayout {
         }
       }
     }
+    val result = super.dispatchTouchEvent(ev)
     Log.d("TouchEvent", "MyGroupA ### dispatchTouchEvent -> $result")
     return result
   }
@@ -63,7 +63,7 @@ class MyGroupA : RelativeLayout {
         }
         MotionEvent.ACTION_MOVE -> {
           Log.d("TouchEvent", "MyGroupA ### onInterceptTouchEvent -> ACTION_MOVE")
-          return true
+//          return true
         }
         MotionEvent.ACTION_UP -> {
           Log.d("TouchEvent", "MyGroupA ### onInterceptTouchEvent -> ACTION_UP")

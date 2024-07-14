@@ -3,12 +3,10 @@ package com.ls.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.alibaba.android.arouter.facade.annotation.Route
 import com.ls.view.custom.CustomViewActivity
 import com.ls.view.databinding.ActivityViewBinding
 import com.ls.view.touch.TouchEventActivity
 
-@Route(path = "/view/Index")
 class ViewActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityViewBinding

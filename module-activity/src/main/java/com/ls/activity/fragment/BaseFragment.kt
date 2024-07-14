@@ -20,11 +20,6 @@ abstract class BaseFragment : Fragment() {
         Log.d(TAG + pageName(), "onCreate =====")
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        Log.d(TAG + pageName(), "onActivityCreated =====")
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

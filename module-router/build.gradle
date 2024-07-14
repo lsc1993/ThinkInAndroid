@@ -48,6 +48,6 @@ dependencies {
     implementation "androidx.core:core-ktx:${rootProject.ext.core_ktx}"
 
     api "com.alibaba:arouter-api:${rootProject.ext.arouter}"
-    annotationProcessor "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
-    kapt "com.alibaba:arouter-compiler:${rootProject.ext.arouter}"
+    
+    
 }
